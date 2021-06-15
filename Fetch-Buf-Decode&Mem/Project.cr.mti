@@ -1,0 +1,127 @@
+{D:/8/Computer Arch/Project/Phase 2/registersOutput.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/8/Computer Arch/Project/Phase 2/registersOutput.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity registerOutput
+-- Compiling architecture registerOutputArch of registerOutput
+
+} {} {}} {D:/8/Computer Arch/Project/Phase 2/instructionMem.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/8/Computer Arch/Project/Phase 2/instructionMem.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity instructionMem
+-- Compiling architecture asyncInstructionMem of instructionMem
+
+} {} {}} {D:/8/Computer Arch/Project/Phase 2/memory.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/8/Computer Arch/Project/Phase 2/memory.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity memory
+-- Compiling architecture memoryArch of memory
+
+} {} {}} {D:/8/Computer Arch/Project/Phase 2/fetch.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/8/Computer Arch/Project/Phase 2/fetch.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity fetch
+-- Compiling architecture fetchArch of fetch
+
+} {} {}} {D:/8/Computer Arch/Project/Phase 2/SP.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/8/Computer Arch/Project/Phase 2/SP.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity SP
+-- Compiling architecture spArch of SP
+
+} {} {}} {D:/8/Computer Arch/Project/Phase 2/fetchBuffer.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/8/Computer Arch/Project/Phase 2/fetchBuffer.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity fetchBuffer
+-- Compiling architecture fetchBufferArch of fetchBuffer
+
+} {} {}} {D:/8/Computer Arch/Project/Phase 2/decode.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/8/Computer Arch/Project/Phase 2/decode.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity decode
+-- Compiling architecture decodeArch of decode
+-- Loading entity ControlUnit
+
+} {} {}} {D:/8/Computer Arch/Project/Phase 2/flagHandler.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/8/Computer Arch/Project/Phase 2/flagHandler.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity flagHandler
+-- Compiling architecture flagHandlerArch of flagHandler
+
+} {} {}} {D:/8/Computer Arch/Project/Phase 2/CCR.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/8/Computer Arch/Project/Phase 2/CCR.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity CCR
+-- Compiling architecture ccrArch of CCR
+
+} {} {}} {D:/8/Computer Arch/Project/Phase 2/ControlUnit.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/8/Computer Arch/Project/Phase 2/ControlUnit.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ControlUnit
+-- Compiling architecture ControlUnitArch of ControlUnit
+
+} {} {}} {D:/8/Computer Arch/Project/Phase 2/hazardDetectionUnit.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/8/Computer Arch/Project/Phase 2/hazardDetectionUnit.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity hazardDetectionUnit
+-- Compiling architecture asynchazardDetectionUnit of hazardDetectionUnit
+
+} {} {}} {D:/8/Computer Arch/Project/Phase 2/dataMem.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/8/Computer Arch/Project/Phase 2/dataMem.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity dataMem
+-- Compiling architecture asyncDataMem of dataMem
+
+} {} {}} {D:/8/Computer Arch/Project/Phase 2/PC.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/8/Computer Arch/Project/Phase 2/PC.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity PC
+-- Compiling architecture pcArch of PC
+
+} {} {}} {D:/8/Computer Arch/Project/Phase 2/main.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/8/Computer Arch/Project/Phase 2/main.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity main
+-- Compiling architecture mainArch of main
+
+} {} {}}
