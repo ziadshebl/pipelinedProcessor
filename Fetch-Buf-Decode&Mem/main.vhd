@@ -128,6 +128,7 @@ BEGIN
 
     decodeModule: decode GENERIC MAP (d) PORT MAP (clk,rst,nopOutFromFetchBuffer,pcOutFromFetchBuffer,instrOutFromFetchBuffer,zeroFlagWB ,negFlagWB ,carryFlagWB,controlSignalsWB,writeRegisterWB,writeDataWB,nopOut,pcOut,controlSignalsCU,zeroFlagOut,negFlagOut,carryFlagOut,rscrDataOut,rdstDataOut,extendImmOut,shamtOut,rscrOut,rdstOut,spOut);    
 
+   
 END mainArch;
 
 

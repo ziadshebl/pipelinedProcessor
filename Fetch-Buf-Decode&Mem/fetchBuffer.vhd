@@ -19,15 +19,30 @@ end entity;
 
 architecture fetchBufferArch OF fetchBuffer IS
 begin
+
+    process(clk, rst)
+    BEGIN
+       IF(rst = '1') THEN
+       pcOut <=(OTHERS=>'0');
+       instrOut <=(OTHERS=>'0');
+       nopOut <= '0';
+    ELSIF rising_edge(clk) THEN
+        nopOut <= branchNop;
+        IF(loadUseStall = '0') THEN
+            pcOut <= pc;
+            instrOut <= instr;
+       END IF;
+    END IF;
+    END PROCESS;
     
-    pcOut <= pc WHEN rst ='0' AND loadUseStall ='0'
-    ELSE (OTHERS=>'0') WHEN rst ='1';
+    -- pcOut <= pc WHEN rst ='0' AND loadUseStall ='0'
+    -- ELSE (OTHERS=>'0') WHEN rst ='1';
 
-    instrOut <= instr WHEN rst ='0' AND loadUseStall ='0'
-    ELSE (OTHERS=>'0') WHEN rst ='1';
+    -- instrOut <= instr WHEN rst ='0' AND loadUseStall ='0'
+    -- ELSE (OTHERS=>'0') WHEN rst ='1';
 
-    nopOut <= branchNop WHEN rst ='0'
-    ELSE '0';
+    -- nopOut <= branchNop WHEN rst ='0'
+    -- ELSE '0';
 
 END ARCHITECTURE;
 

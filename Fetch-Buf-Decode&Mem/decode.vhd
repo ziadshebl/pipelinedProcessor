@@ -75,6 +75,8 @@ BEGIN
     regOutModule: registerOutput GENERIC MAP (d) PORT MAP (clk,controlSignalsWB(7),controlSignalsWB(8),rst,instr(23 downto 21),instr(26 downto 24),writeRegisterWB,writeDataWB,rscrDataOut,rdstDataOut);  -- Outport enable, Nop signal  
     ccrModule: CCR PORT MAP (clk,rst,zeroFlagWB,negFlagWB,carryFlagWB,zeroFlagOut,negFlagOut,carryFlagOut);  
 
+    CU : entity work.ControlUnit PORT MAP (instr(31 downto 27),controlSignalsCU);
+    
     inputSP <= outputSP WHEN controlSignalsWB(5) = '0'  -- Stack control signal
     ELSE writeDataWB;
 
@@ -91,7 +93,7 @@ BEGIN
 
     spOut <= (outputSP); 
     
-    controlSignalsCU <= "111111111111111111";
+    -- controlSignalsCU <= "111111111111111111";
 
 END decodeArch;
 
