@@ -33,7 +33,9 @@ shamtOut: OUT std_logic_vector(4 DOWNTO 0);
 rscrOut : OUT std_logic_vector(2 DOWNTO 0);
 rdstOut : OUT std_logic_vector(2 DOWNTO 0);
 spOut : OUT std_logic_vector(d-1 DOWNTO 0);
-outPortRegister: OUT std_logic_vector(d-1 downto 0) );
+outPortRegister: OUT std_logic_vector(d-1 downto 0);
+aluResultWB : IN std_logic_vector(d-1 DOWNTO 0)
+);
 END ENTITY decode;
 
 
@@ -83,7 +85,7 @@ BEGIN
     CU : entity work.ControlUnit PORT MAP (rst,instr(31 downto 27),controlSignalsCU);
     
     inputSP <= outputSP WHEN controlSignalsWB(5) = '0'  -- Stack control signal
-    ELSE writeDataWB;
+    ELSE aluResultWB;
 
     pcOut <= pc;
     nopOut <= nop;

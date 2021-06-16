@@ -24,8 +24,14 @@ BEGIN
 	ELSE  (15 => '1', 10=>'1', others => '0') WHEN opCode = "00011"
 	--LOAD
 	ELSE  (15 => '1', 11=>'1', 9=>'1', others => '0') WHEN opCode = "00010"
-	--BRANCH	
-	ELSE  (14 => '1', others => '0') WHEN opCode = "11001" or opCode = "11010" or opCode = "11011" or opCode = "11100" 
+	--BRANCH (JZ)	
+	ELSE  (14 => '1', others => '0') WHEN opCode = "11001"
+	--BRANCH (JN)
+	ELSE  (14 => '1', 12=>'1', others => '0') WHEN opCode = "11010"
+	--BRANCH (JC)
+	ELSE  (14 => '1', 13=>'1' ,others => '0') WHEN opCode = "11011"
+	--BRANCH (JMP)
+	ELSE   (14 => '1', 13=>'1', 12=>'1', others => '0') WHEN opCode = "11100" 
 	--NOP	
 	ELSE  (8 => '1', others => '0') WHEN opCode = "01000"
 	--OUT
@@ -37,9 +43,9 @@ BEGIN
 	--POP
 	ELSE  (16 => '1', 9=>'1', 5=>'1', others => '0') WHEN opCode = "00101"
 	--CALL
-	ELSE (16 => '1', 14=>'1', 10=>'1',6=>'1', 5=>'1', others => '0') WHEN opCode = "11101"
+	ELSE (16 => '1', 14=>'1',  13=>'1', 12=>'1', 10=>'1',6=>'1', 5=>'1', others => '0') WHEN opCode = "11101"
 	--RETURN
-	ELSE (16 => '1', 14=>'1', 9=>'1',5=>'1', 4=>'1', others => '0') WHEN opCode = "11110"
+	ELSE (16 => '1', 14=>'1', 13=>'1', 12=>'1', 9=>'1',5=>'1', 4=>'1', others => '0') WHEN opCode = "11110"
 	;
 
 

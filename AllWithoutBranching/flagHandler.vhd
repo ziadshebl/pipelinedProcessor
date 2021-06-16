@@ -42,12 +42,11 @@ BEGIN
            carryFlagOut<='0';
     else
         if(nop = '0') THEN
-            -- IF (opCode = "1011" or opCode ="1100") THEN
-            --     carryFlagOut<= carry;
-            -- elsif
-            IF (opCode = "1011" or opCode ="1100") THEN
+            if (opCode="0001" or opCode="0111" or opCode="1000" ) then --and or not   removed: inc dec
+                zeroFlagOut<= zero;
+                negFlagOut<= neg;
+            elsif (opCode = "1011" or opCode ="1100") THEN -- setc clrc
                 carryFlagOut<= carry;
-            -- if this operation is supposed to change flags and theres no NOP inserted
             elsif (changeFlag(to_integer(unsigned((opCode))))='1') then
                 zeroFlagOut<= zero;
                 negFlagOut<= neg;

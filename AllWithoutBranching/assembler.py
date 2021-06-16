@@ -35,10 +35,10 @@ metaData = "// memory data file (do not edit the following line - required for m
 with open('output.mem', 'w') as f:
         f.write("%s\n" % metaData)
 
-myFile = open("test.asm", "r")
+myFile = open("memory.asm", "r")
 myInstructions = []
 index = 0
-with open('test.asm', 'r') as f:
+with open('memory.asm', 'r') as f:
     for line in f:
 
         line  = myFile.readline()
@@ -228,7 +228,7 @@ with open('test.asm', 'r') as f:
             instruction = "00011"
             instruction += calculateRegisterAddress(objects[1])
             
-            objects[2]=objects[2].replace(")")
+            objects[2]=objects[2].replace(")", "")
             offset = objects[2].split("(")[0]
             rsrc = objects[2].split("(")[1]
 
@@ -237,9 +237,9 @@ with open('test.asm', 'r') as f:
             for i in range(5):
                     instruction+= "0"
         else:
-            instruction = objects[0]              
+            instruction = format(int(objects[0],16),'032b')              
 
-        if(objects[0]!=".ORG"):    
+        if(objects[0]!=".ORG"):   
             if(len(instruction)<=16):
                 lineToAppend = str(hex(index))[2:]+": "+instruction
                 myInstructions.append(lineToAppend) 

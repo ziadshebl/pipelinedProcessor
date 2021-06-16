@@ -139,9 +139,14 @@ SIGNAL FUstackSelector	: std_logic_vector(1 downto 0);
 -- From Hazard Detection
 SIGNAL addHold : std_logic;
 SIGNAL branchNop,loadUseStall  :  STD_LOGIC;  
-SIGNAL nopHazardDetectionToDecode : std_logic; 
+SIGNAL nopHazardDetectionToDecode : std_logic;
 
-
+--From branch detection Unit
+SIGNAL branch :  std_logic;  
+    
+    
+-- branchModule: entity work.BranchDetectionUnit PORT MAP (controlSignalsFromDecBuffer(14 downto 12),zeroFlagFromExec,carryFlagFromExec,negFlagFromExec,branch);    
+    
 BEGIN   
 
     fetchModule: entity work.fetch GENERIC MAP (d) PORT MAP (clk,rst,addHold,controlSignalsWB(4),branch,RDstDataFromDecBuffer,writeBackAfterMux,pcValueSignalFromFetch,instrValueSignalFromFetch);    
@@ -150,7 +155,7 @@ BEGIN
 
     decodeModule: entity work.decode GENERIC MAP (d) PORT MAP (clk,rst,nopOutFromFetchBuffer,pcOutFromFetchBuffer,instrOutFromFetchBuffer,zeroFlagWB ,negFlagWB ,carryFlagWB,
     controlSignalsWB,rdstWB,writeBackAfterMux,nopOutFromDecode,pcOutFromDecode,controlSignalsCUFromDecode,zeroFlagOutFromDecode,negFlagOutFromDecode,carryFlagOutFromDecode,
-    rscrDataOutFromDecode,rdstDataOutFromDecode,extendImmOutFromDecode,shamtOutFromDecode,rscrOutFromDecode,rdstOutFromDecode,spOutFromDecode,outPortRegister);    
+    rscrDataOutFromDecode,rdstDataOutFromDecode,extendImmOutFromDecode,shamtOutFromDecode,rscrOutFromDecode,rdstOutFromDecode,spOutFromDecode,outPortRegister,aluResultWB);    
 
     decodeBufferModule: entity work.decodeBuffer GENERIC MAP (d) PORT MAP (clk,rst,nopHazardDetectionToDecode,nopOutFromFetchBuffer,pcOutFromFetchBuffer,spOutFromDecode,    
     controlSignalsCUFromDecode,rscrDataOutFromDecode,rdstDataOutFromDecode,extendImmOutFromDecode,shamtOutFromDecode,rscrOutFromDecode,rdstOutFromDecode,    
